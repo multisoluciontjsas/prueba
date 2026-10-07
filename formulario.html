@@ -54,9 +54,8 @@
         /* Estilos del Formulario */
         h2 {
             text-align: center;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             color: #2c3e50;
-            font-size: 24px;
         }
 
         .form-row {
@@ -76,7 +75,7 @@
 
         label {
             display: block;
-            margin-bottom: 6px;
+            margin-bottom: 5px;
             font-weight: 600;
             font-size: 14px;
         }
@@ -85,7 +84,7 @@
         input[type="email"],
         input[type="tel"] {
             width: 100%;
-            padding: 12px;
+            padding: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
             font-size: 14px;
@@ -97,43 +96,32 @@
             outline: none;
         }
 
-        /* ESTILO PROFESIONAL PARA TU ENLACE DE REGISTRO */
-        .submit-container {
+        .btn-submit {
             width: 100%;
-            margin-top: 15px;
-            text-align: center;
-        }
-
-        .btn-submit-link {
-            display: block;
-            width: 100%;
-            padding: 14px;
+            padding: 12px;
             background-color: #2ecc71;
-            color: white !important;
+            border: none;
+            color: white;
             font-size: 16px;
             font-weight: bold;
-            text-align: center;
-            text-decoration: none; /* Quita la línea de enlace común */
             border-radius: 4px;
             cursor: pointer;
             transition: background 0.3s;
+            margin-top: 10px;
         }
 
-        .btn-submit-link:hover {
+        .btn-submit:hover {
             background-color: #27ae60;
         }
-
-        /* Adaptabilidad para Teléfonos Inteligentes */
+        /* Ajuste responsivo por si la pantalla es más pequeña que el banner */
         @media (max-width: 500px) {
+            .ad-container {
+                width: 100%;
+                max-width: 468px;
+            }
             .form-row {
                 flex-direction: column;
                 gap: 0;
-            }
-            body {
-                padding: 10px 5px;
-            }
-            .container {
-                padding: 15px 10px;
             }
         }
     </style>
