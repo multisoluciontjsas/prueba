@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Registro</title>
+    <title>Formulario de Registro Optimizado</title>
     <style>
         * {
             box-sizing: border-box;
@@ -18,7 +18,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 20px 10px;
+            padding: 20px;
         }
 
         .container {
@@ -31,49 +31,39 @@
             padding: 20px;
         }
 
-        /* SOLUCIÓN AL CENTRADO Y CORTE DEL ANUNCIO */
-        .ad-container {
-            width: 100% !important;
-            min-height: 60px;
-            margin: 20px 0 !important;
-            
-            /* Fuerza el centrado absoluto del iframe interno de la publicidad */
-            display: flex !important;
-            justify-content: center !important;
-            align-items: center !important;
-            text-align: center !important;
-            
-            background-color: #f9f9f9;
-            border: 1px dashed #ccc;
+        /* Estilos para los bloques de anuncios */
+        .ad-space {
+            background-color: #fcf8e3;
+            border: 2px dashed #fbeed5;
+            color: #c09853;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+            font-weight: bold;
             border-radius: 6px;
-            overflow: visible; /* Evita que el anuncio se corte a los lados */
+            margin-bottom: 20px;
         }
 
-        /* Fuerza a que el script externo se centre automáticamente */
-        .ad-container > * {
-            margin: 0 auto !important;
-            display: block !important;
-            max-width: 100% !important;
+        .ad-space.middle {
+            margin: 25px 0;
+            background-color: #d9edf7;
+            border-color: #bce8f1;
+            color: #3a87ad;
         }
 
-        .ad-container.header-ad {
-            margin: 0 auto 25px auto !important;
-        }
-
-        .ad-container.middle {
-            margin: 30px auto !important;
-        }
-
-        .ad-container.footer-ad {
-            margin: 25px auto 0 auto !important;
+        .ad-space.footer-ad {
+            margin-top: 20px;
+            margin-bottom: 0;
+            background-color: #f5f5f5;
+            border-color: #ddd;
+            color: #777;
         }
 
         /* Estilos del Formulario */
         h2 {
             text-align: center;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             color: #2c3e50;
-            font-size: 24px;
         }
 
         .form-row {
@@ -93,7 +83,7 @@
 
         label {
             display: block;
-            margin-bottom: 6px;
+            margin-bottom: 5px;
             font-weight: 600;
             font-size: 14px;
         }
@@ -102,7 +92,7 @@
         input[type="email"],
         input[type="tel"] {
             width: 100%;
-            padding: 12px;
+            padding: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
             font-size: 14px;
@@ -114,43 +104,29 @@
             outline: none;
         }
 
-        /* ESTILO CORRECTO PARA EL BOTÓN CON TU ENLACE DE REDIRECCIÓN */
-        .submit-container {
+        .btn-submit {
             width: 100%;
-            margin-top: 15px;
-            text-align: center;
-        }
-
-        .btn-submit-link {
-            display: block;
-            width: 100%;
-            padding: 14px;
+            padding: 12px;
             background-color: #2ecc71;
-            color: white !important;
+            border: none;
+            color: white;
             font-size: 16px;
             font-weight: bold;
-            text-align: center;
-            text-decoration: none; /* Quita el subrayado clásico de los links */
             border-radius: 4px;
             cursor: pointer;
             transition: background 0.3s;
+            margin-top: 10px;
         }
 
-        .btn-submit-link:hover {
+        .btn-submit:hover {
             background-color: #27ae60;
         }
 
-        /* Adaptabilidad para Teléfonos Inteligentes */
-        @media (max-width: 500px) {
+        /* Ajuste responsivo para campos juntos */
+        @media (max-width: 480px) {
             .form-row {
                 flex-direction: column;
                 gap: 0;
-            }
-            body {
-                padding: 10px 5px;
-            }
-            .container {
-                padding: 15px 10px;
             }
         }
     </style>
@@ -170,14 +146,16 @@
                 'params' : {}
               };
             </script>
-            <script src="https://highrevenueformat.com"></script>
+            <script src="https://www.highrevenueformat.com/67facd5dae3141d3a5a72c7684741c7a/invoke.js">
+                
+            </script>
         </div>
 
         <h2>Regístrate</h2>
 
         <form action="#" method="POST">
             
-            <!-- Bloque 1: Datos Personales Básicos -->
+            <!-- Bloque 1: Cuenta, Nombre y Correo -->
             <div class="form-group full-width">
                 <label for="nombre">Nombre Completo</label>
                 <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
@@ -189,20 +167,22 @@
             </div>
 
             <!-- 2. ANUNCIO EN LA MITAD -->
-            <div class="ad-container middle">
-                <script>
-                  atOptions = {
-                    'key' : '67facd5dae3141d3a5a72c7684741c7a',
-                    'format' : 'iframe',
-                    'height' : 60,
-                    'width' : 468,
-                    'params' : {}
-                  };
-                </script>
-                <script src="https://highrevenueformat.com"></script>
-            </div>
+        <div class="ad-container header-ad">
+            <script>
+              atOptions = {
+                'key' : '67facd5dae3141d3a5a72c7684741c7a',
+                'format' : 'iframe',
+                'height' : 60,
+                'width' : 468,
+                'params' : {}
+              };
+            </script>
+            <script src="https://www.highrevenueformat.com/67facd5dae3141d3a5a72c7684741c7a/invoke.js">
+                
+            </script>
+        </div>
 
-            <!-- Bloque 2: Ubicación Geográfica -->
+            <!-- Bloque 2: Ubicación (País, Estado, Municipio) en una sola fila para ahorrar espacio -->
             <div class="form-row">
                 <div class="form-group">
                     <label for="pais">País</label>
@@ -226,19 +206,12 @@
                 <input type="tel" id="telefono" name="telefono" placeholder="Ej. +1 234 567 890" required>
             </div>
 
-            <!-- BOTON REGISTRATE CON TU ENLACE PATROCINADO -->
-            <div class="submit-container">
-                 <a href="https://www.profitableratecpmnetwork.com/qyuzwmmbm?key=3b0d02df84e8d62e5f125d8d748f952c"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn-submit-link">
-                    Registrar
-                 </a>
-            </div>
+            <!-- Botón Registrarse -->
+            <button type="submit" class="btn-submit">Registrar</button>
         </form>
 
         <!-- 3. ANUNCIO EN EL PIE DE PÁGINA -->
-        <div class="ad-container footer-ad">
+        <div class="ad-container header-ad">
             <script>
               atOptions = {
                 'key' : '67facd5dae3141d3a5a72c7684741c7a',
@@ -248,10 +221,11 @@
                 'params' : {}
               };
             </script>
-            <script src="https://highrevenueformat.com"></script>
+            <script src="https://www.highrevenueformat.com/67facd5dae3141d3a5a72c7684741c7a/invoke.js">
+                
+            </script>
         </div>
-
-    </div>
 
 </body>
 </html>
+
