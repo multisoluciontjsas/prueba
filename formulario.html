@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Registro Optimizado</title>
+    <title>Formulario de Registro</title>
     <style>
         * {
             box-sizing: border-box;
@@ -31,35 +31,44 @@
             padding: 20px;
         }
 
-      /* Estilos para los bloques de anuncios */
-.ad-space {
-    width: 100%;
-    max-width: 468px; /* Forzado al ancho exacto de tu anuncio */
-    height: 60px;     /* Forzado al alto exacto de tu anuncio */
-    
-    /* Centrado del contenedor en la página */
-    margin: 0 auto 20px auto !important; 
-    
-    /* Centrado absoluto del código/iframe del anuncio */
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    text-align: center !important;
-    
-    background-color: #fcf8e3;
-    border: 2px dashed #fbeed5;
-    color: #c09853;
-    font-size: 14px;
-    font-weight: bold;
-    border-radius: 6px;
-    overflow: hidden;
-}
+        /* Estilos modificados para centrar los bloques de anuncios automáticamente */
+        .ad-space {
+            width: 100%;
+            max-width: 468px; /* Ancho exacto de tu banner */
+            height: 60px;     /* Alto exacto de tu banner */
+            
+            /* Centrado del contenedor en la página */
+            margin: 0 auto 20px auto !important; 
+            
+            /* Centrado absoluto del iframe/código del anuncio */
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            text-align: center !important;
+            
+            background-color: #fcf8e3;
+            border: 2px dashed #fbeed5;
+            color: #c09853;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 6px;
+            overflow: hidden;
+        }
 
-/* Forzar el centrado de cualquier elemento interno generado por el script publicitario */
-.ad-space * {
-    margin: 0 auto !important;
-    display: inline-block !important;
-}
+        /* Forzar el centrado de cualquier elemento interno que cargue el script publicitario */
+        .ad-space * {
+            margin: 0 auto !important;
+            display: inline-block !important;
+        }
+
+        .ad-space.middle {
+            margin: 25px auto !important;
+        }
+
+        .ad-space.footer-ad {
+            margin: 20px auto 0 auto !important;
+        }
+
         /* Estilos del Formulario */
         h2 {
             text-align: center;
@@ -123,7 +132,7 @@
             background-color: #27ae60;
         }
 
-        /* Ajuste responsivo para campos juntos */
+        /* Ajuste responsivo para pantallas móviles */
         @media (max-width: 480px) {
             .form-row {
                 flex-direction: column;
@@ -137,7 +146,7 @@
     <div class="container">
         
         <!-- 1. ANUNCIO EN EL ENCABEZADO -->
-        <div class="ad-container header-ad">
+        <div class="ad-space header-ad">
             <script>
               atOptions = {
                 'key' : '67facd5dae3141d3a5a72c7684741c7a',
@@ -147,7 +156,7 @@
                 'params' : {}
               };
             </script>
-            <script src="https://www.highrevenueformat.com/67facd5dae3141d3a5a72c7684741c7a/invoke.js"></script>
+            <script src="https://highrevenueformat.com"></script>
         </div>
 
         <h2>Regístrate</h2>
@@ -165,8 +174,8 @@
                 <input type="email" id="email" name="email" placeholder="juan@ejemplo.com" required>
             </div>
 
-           <!-- 2. ANUNCIO EN LA MITAD -->
-            <div class="ad-container middle">
+            <!-- 2. ANUNCIO EN LA MITAD -->
+            <div class="ad-space middle">
                 <script>
                   atOptions = {
                     'key' : '67facd5dae3141d3a5a72c7684741c7a',
@@ -176,10 +185,10 @@
                     'params' : {}
                   };
                 </script>
-                <script src="https://www.highrevenueformat.com/67facd5dae3141d3a5a72c7684741c7a/invoke.js"></script>
+                <script src="https://highrevenueformat.com"></script>
             </div>
 
-            <!-- Bloque 2: Ubicación (País, Estado, Municipio) en una sola fila para ahorrar espacio -->
+            <!-- Bloque 2: Ubicación (País, Estado, Municipio) -->
             <div class="form-row">
                 <div class="form-group">
                     <label for="pais">País</label>
@@ -203,23 +212,23 @@
                 <input type="tel" id="telefono" name="telefono" placeholder="Ej. +1 234 567 890" required>
             </div>
 
-            <!-- Botón Registrarse -->
+            <!-- Botón Registrar -->
             <button type="submit" class="btn-submit">Registrar</button>
         </form>
 
         <!-- 3. ANUNCIO EN EL PIE DE PÁGINA -->
-            <div class="ad-container middle">
-                <script>
-                  atOptions = {
-                    'key' : '67facd5dae3141d3a5a72c7684741c7a',
-                    'format' : 'iframe',
-                    'height' : 60,
-                    'width' : 468,
-                    'params' : {}
-                  };
-                </script>
-                <script src="https://www.highrevenueformat.com/67facd5dae3141d3a5a72c7684741c7a/invoke.js"></script>
-            </div>
+        <div class="ad-space footer-ad">
+            <script>
+              atOptions = {
+                'key' : '67facd5dae3141d3a5a72c7684741c7a',
+                'format' : 'iframe',
+                'height' : 60,
+                'width' : 468,
+                'params' : {}
+              };
+            </script>
+            <script src="https://highrevenueformat.com"></script>
+        </div>
 
     </div>
 
