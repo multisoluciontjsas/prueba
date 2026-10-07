@@ -18,7 +18,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 20px;
+            padding: 20px 10px;
         }
 
         .container {
@@ -31,32 +31,49 @@
             padding: 20px;
         }
 
-        /* Contenedores optimizados para banners de 468x60 */
+        /* SOLUCIÓN AL CENTRADO Y CORTE DEL ANUNCIO */
         .ad-container {
-            width: 468px;
-            height: 60px;
-            margin: 0 auto 20px auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            width: 100% !important;
+            min-height: 60px;
+            margin: 20px 0 !important;
+            
+            /* Fuerza el centrado absoluto del iframe interno de la publicidad */
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            text-align: center !important;
+            
             background-color: #f9f9f9;
             border: 1px dashed #ccc;
-            overflow: hidden;
+            border-radius: 6px;
+            overflow: visible; /* Evita que el anuncio se corte a los lados */
+        }
+
+        /* Fuerza a que el script externo se centre automáticamente */
+        .ad-container > * {
+            margin: 0 auto !important;
+            display: block !important;
+            max-width: 100% !important;
+        }
+
+        .ad-container.header-ad {
+            margin: 0 auto 25px auto !important;
         }
 
         .ad-container.middle {
-            margin: 25px auto;
+            margin: 30px auto !important;
         }
 
         .ad-container.footer-ad {
-            margin: 20px auto 0 auto;
+            margin: 25px auto 0 auto !important;
         }
 
         /* Estilos del Formulario */
         h2 {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             color: #2c3e50;
+            font-size: 24px;
         }
 
         .form-row {
@@ -76,7 +93,7 @@
 
         label {
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 6px;
             font-weight: 600;
             font-size: 14px;
         }
@@ -85,7 +102,7 @@
         input[type="email"],
         input[type="tel"] {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             border: 1px solid #ccc;
             border-radius: 4px;
             font-size: 14px;
@@ -97,43 +114,53 @@
             outline: none;
         }
 
-        .btn-submit {
+        /* ESTILO CORRECTO PARA EL BOTÓN CON TU ENLACE DE REDIRECCIÓN */
+        .submit-container {
             width: 100%;
-            padding: 12px;
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .btn-submit-link {
+            display: block;
+            width: 100%;
+            padding: 14px;
             background-color: #2ecc71;
-            border: none;
-            color: white;
+            color: white !important;
             font-size: 16px;
             font-weight: bold;
+            text-align: center;
+            text-decoration: none; /* Quita el subrayado clásico de los links */
             border-radius: 4px;
             cursor: pointer;
             transition: background 0.3s;
-            margin-top: 10px;
         }
 
-        .btn-submit:hover {
+        .btn-submit-link:hover {
             background-color: #27ae60;
         }
 
-        /* Ajuste responsivo por si la pantalla es más pequeña que el banner */
+        /* Adaptabilidad para Teléfonos Inteligentes */
         @media (max-width: 500px) {
-            .ad-container {
-                width: 100%;
-                max-width: 468px;
-            }
             .form-row {
                 flex-direction: column;
                 gap: 0;
+            }
+            body {
+                padding: 10px 5px;
+            }
+            .container {
+                padding: 15px 10px;
             }
         }
     </style>
 </head>
 <body>
-    
+
     <div class="container">
         
         <!-- 1. ANUNCIO EN EL ENCABEZADO -->
-        <div class="ad-space header-ad">
+        <div class="ad-container header-ad">
             <script>
               atOptions = {
                 'key' : '67facd5dae3141d3a5a72c7684741c7a',
@@ -150,7 +177,7 @@
 
         <form action="#" method="POST">
             
-            <!-- Campos Iniciales -->
+            <!-- Bloque 1: Datos Personales Básicos -->
             <div class="form-group full-width">
                 <label for="nombre">Nombre Completo</label>
                 <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
@@ -162,7 +189,7 @@
             </div>
 
             <!-- 2. ANUNCIO EN LA MITAD -->
-            <div class="ad-space middle">
+            <div class="ad-container middle">
                 <script>
                   atOptions = {
                     'key' : '67facd5dae3141d3a5a72c7684741c7a',
@@ -175,7 +202,7 @@
                 <script src="https://highrevenueformat.com"></script>
             </div>
 
-            <!-- Campos de Ubicación -->
+            <!-- Bloque 2: Ubicación Geográfica -->
             <div class="form-row">
                 <div class="form-group">
                     <label for="pais">País</label>
@@ -193,6 +220,7 @@
                 <input type="text" id="municipio" name="municipio" placeholder="Tu municipio" required>
             </div>
 
+            <!-- Bloque 3: Teléfono -->
             <div class="form-group full-width">
                 <label for="telefono">Teléfono</label>
                 <input type="tel" id="telefono" name="telefono" placeholder="Ej. +1 234 567 890" required>
@@ -210,7 +238,7 @@
         </form>
 
         <!-- 3. ANUNCIO EN EL PIE DE PÁGINA -->
-        <div class="ad-space footer-ad">
+        <div class="ad-container footer-ad">
             <script>
               atOptions = {
                 'key' : '67facd5dae3141d3a5a72c7684741c7a',
