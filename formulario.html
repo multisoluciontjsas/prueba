@@ -62,9 +62,8 @@
         /* Estilos del Formulario */
         h2 {
             text-align: center;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             color: #2c3e50;
-            font-size: 24px;
         }
 
         .form-row {
@@ -84,7 +83,7 @@
 
         label {
             display: block;
-            margin-bottom: 6px;
+            margin-bottom: 5px;
             font-weight: 600;
             font-size: 14px;
         }
@@ -93,7 +92,7 @@
         input[type="email"],
         input[type="tel"] {
             width: 100%;
-            padding: 12px;
+            padding: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
             font-size: 14px;
@@ -107,7 +106,7 @@
 
         .btn-submit {
             width: 100%;
-            padding: 14px;
+            padding: 12px;
             background-color: #2ecc71;
             border: none;
             color: white;
@@ -116,24 +115,18 @@
             border-radius: 4px;
             cursor: pointer;
             transition: background 0.3s;
-            margin-top: 15px;
+            margin-top: 10px;
         }
 
         .btn-submit:hover {
             background-color: #27ae60;
         }
 
-        /* Adaptabilidad para Teléfonos Inteligentes */
-        @media (max-width: 500px) {
+        /* Ajuste responsivo para campos juntos */
+        @media (max-width: 480px) {
             .form-row {
                 flex-direction: column;
                 gap: 0;
-            }
-            body {
-                padding: 10px 5px;
-            }
-            .container {
-                padding: 15px 10px;
             }
         }
     </style>
@@ -144,24 +137,15 @@
         
         <!-- 1. ANUNCIO EN EL ENCABEZADO -->
         <div class="ad-space header-ad">
-            <script>
-  atOptions = {
-    'key' : '67facd5dae3141d3a5a72c7684741c7a',
-    'format' : 'iframe',
-    'height' : 60,
-    'width' : 468,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highrevenueformat.com/67facd5dae3141d3a5a72c7684741c7a/invoke.js">
-    
-</script>
-    
+            ▲ ESPACIO PUBLICITARIO (ENCABEZADO) ▲<br>
+            <span style="font-size: 11px; font-weight: normal;">Código de anuncio / Banner superior</span>
+        </div>
+
         <h2>Regístrate</h2>
 
         <form action="#" method="POST">
             
-            <!-- Campos Iniciales -->
+            <!-- Bloque 1: Cuenta, Nombre y Correo -->
             <div class="form-group full-width">
                 <label for="nombre">Nombre Completo</label>
                 <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
@@ -174,19 +158,11 @@
 
             <!-- 2. ANUNCIO EN LA MITAD -->
             <div class="ad-space middle">
-                <script>
-                  atOptions = {
-                    'key' : '67facd5dae3141d3a5a72c7684741c7a',
-                    'format' : 'iframe',
-                    'height' : 60,
-                    'width' : 468,
-                    'params' : {}
-                  };
-                </script>
-                <script src="https://highrevenueformat.com"></script>
+                ■ ANUNCIO INTERMEDIO ■<br>
+                <span style="font-size: 11px; font-weight: normal;">Publicidad intermedia basada en contenido</span>
             </div>
 
-            <!-- Campos de Ubicación -->
+            <!-- Bloque 2: Ubicación (País, Estado, Municipio) en una sola fila para ahorrar espacio -->
             <div class="form-row">
                 <div class="form-group">
                     <label for="pais">País</label>
@@ -204,27 +180,20 @@
                 <input type="text" id="municipio" name="municipio" placeholder="Tu municipio" required>
             </div>
 
+            <!-- Bloque 3: Teléfono -->
             <div class="form-group full-width">
                 <label for="telefono">Teléfono</label>
                 <input type="tel" id="telefono" name="telefono" placeholder="Ej. +1 234 567 890" required>
             </div>
 
-            <!-- Botón Registrar -->
+            <!-- Botón Registrarse -->
             <button type="submit" class="btn-submit">Registrar</button>
         </form>
 
         <!-- 3. ANUNCIO EN EL PIE DE PÁGINA -->
         <div class="ad-space footer-ad">
-            <script>
-              atOptions = {
-                'key' : '67facd5dae3141d3a5a72c7684741c7a',
-                'format' : 'iframe',
-                'height' : 60,
-                'width' : 468,
-                'params' : {}
-              };
-            </script>
-            <script src="https://highrevenueformat.com"></script>
+            ▼ ESPACIO PUBLICITARIO (PIE DE PÁGINA) ▼<br>
+            <span style="font-size: 11px; font-weight: normal;">Enlaces patrocinados o banners inferiores</span>
         </div>
 
     </div>
