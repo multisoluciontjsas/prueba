@@ -31,43 +31,26 @@
             padding: 20px;
         }
 
-        /* SOLUCIÓN AL CENTRADO Y CORTE DEL ANUNCIO */
-        .ad-space {
-            width: 100% !important;
-            min-height: 60px;
-            margin: 20px 0 !important;
-            
-            /* Fuerza el centrado absoluto del iframe interno de la publicidad */
-            display: flex !important;
-            justify-content: center !important;
-            align-items: center !important;
-            text-align: center !important;
-            
-            background-color: #fcf8e3;
-            border: 2px dashed #fbeed5;
-            border-radius: 6px;
-            overflow: visible;
+        /* Contenedores optimizados para banners de 468x60 */
+        .ad-container {
+            width: 468px;
+            height: 60px;
+            margin: 0 auto 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f9f9f9;
+            border: 1px dashed #ccc;
+            overflow: hidden;
         }
 
-        /* Fuerza a que el script externo, div o iframe se centre automáticamente */
-        .ad-space > * {
-            margin: 0 auto !important;
-            display: block !important;
-            max-width: 100% !important;
+        .ad-container.middle {
+            margin: 25px auto;
         }
 
-        .ad-space.header-ad {
-            margin: 0 auto 25px auto !important;
+        .ad-container.footer-ad {
+            margin: 20px auto 0 auto;
         }
-
-        .ad-space.middle {
-            margin: 30px auto !important;
-        }
-
-        .ad-space.footer-ad {
-            margin: 25px auto 0 auto !important;
-        }
-
         /* Estilos del Formulario */
         h2 {
             text-align: center;
