@@ -30,42 +30,32 @@
             overflow: hidden;
             padding: 20px;
         }
-
-        /* SOLUCIÓN AL CENTRADO Y CORTE DEL ANUNCIO */
+/* Estilos para los bloques de anuncios */
         .ad-space {
-            width: 100% !important;
-            min-height: 60px;
-            margin: 20px 0 !important;
-            
-            /* Fuerza el centrado absoluto del iframe interno de la publicidad */
-            display: flex !important;
-            justify-content: center !important;
-            align-items: center !important;
-            text-align: center !important;
-            
             background-color: #fcf8e3;
             border: 2px dashed #fbeed5;
+            color: #c09853;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+            font-weight: bold;
             border-radius: 6px;
-            overflow: visible; /* Permite que el iframe renderice sin recortarse */
-        }
-
-        /* Fuerza a que el script externo, div o iframe se centre automáticamente */
-        .ad-space > * {
-            margin: 0 auto !important;
-            display: block !important;
-            max-width: 100% !important;
-        }
-
-        .ad-space.header-ad {
-            margin: 0 auto 25px auto !important;
+            margin-bottom: 20px;
         }
 
         .ad-space.middle {
-            margin: 30px auto !important;
+            margin: 25px 0;
+            background-color: #d9edf7;
+            border-color: #bce8f1;
+            color: #3a87ad;
         }
 
         .ad-space.footer-ad {
-            margin: 25px auto 0 auto !important;
+            margin-top: 20px;
+            margin-bottom: 0;
+            background-color: #f5f5f5;
+            border-color: #ddd;
+            color: #777;
         }
 
         /* Estilos del Formulario */
@@ -154,16 +144,17 @@
         <!-- 1. ANUNCIO EN EL ENCABEZADO -->
         <div class="ad-space header-ad">
             <script>
-              atOptions = {
-                'key' : '67facd5dae3141d3a5a72c7684741c7a',
-                'format' : 'iframe',
-                'height' : 60,
-                'width' : 468,
-                'params' : {}
-              };
-            </script>
-            <script src="https://highrevenueformat.com"></script>
-        </div>
+  atOptions = {
+    'key' : 'f27535e46097308161575e4de2879d56',
+    'format' : 'iframe',
+    'height' : 600,
+    'width' : 160,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/f27535e46097308161575e4de2879d56/invoke.js">
+    
+</script>
 
         <h2>Regístrate</h2>
 
