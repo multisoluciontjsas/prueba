@@ -31,33 +31,35 @@
             padding: 20px;
         }
 
-        /* Estilos para los bloques de anuncios */
-        .ad-space {
-            background-color: #fcf8e3;
-            border: 2px dashed #fbeed5;
-            color: #c09853;
-            text-align: center;
-            padding: 15px;
-            font-size: 14px;
-            font-weight: bold;
-            border-radius: 6px;
-            margin-bottom: 20px;
-        }
+       /* Estilos para los bloques de anuncios */
+.ad-space {
+    width: 100%;
+    max-width: 468px; /* Forzado al ancho exacto de tu anuncio */
+    height: 60px;     /* Forzado al alto exacto de tu anuncio */
+    
+    /* Centrado del contenedor en la página */
+    margin: 0 auto 20px auto !important; 
+    
+    /* Centrado absoluto del código/iframe del anuncio */
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    
+    background-color: #fcf8e3;
+    border: 2px dashed #fbeed5;
+    color: #c09853;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 6px;
+    overflow: hidden;
+}
 
-        .ad-space.middle {
-            margin: 25px 0;
-            background-color: #d9edf7;
-            border-color: #bce8f1;
-            color: #3a87ad;
-        }
-
-        .ad-space.footer-ad {
-            margin-top: 20px;
-            margin-bottom: 0;
-            background-color: #f5f5f5;
-            border-color: #ddd;
-            color: #777;
-        }
+/* Forzar el centrado de cualquier elemento interno generado por el script publicitario */
+.ad-space * {
+    margin: 0 auto !important;
+    display: inline-block !important;
+}
 
         /* Estilos del Formulario */
         h2 {
